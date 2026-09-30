@@ -22,15 +22,14 @@ with tab1:
     if "แนวตั้ง" in parabola_type:
         x = np.linspace(h - 5, h + 5, 200)
         y = a * (x - h)**2 + k
-        ax.plot(x, y, color="#9292D1", lw=2.5, label="Parabola")
         direction = "หงาย (เปิดบน)" if a > 0 else "คว่ำ (เปิดล่าง)"
     else:
         y = np.linspace(k - 5, k + 5, 200)
         x = a * (y - k)**2 + h
-        ax.plot(x, y, color="#e51c23", lw=2.5, label="Parabola")
+        ax.plot(x, y, color=("#e51c23"), lw=2.5, label="Parabola")
         direction = "เปิดขวา" if a > 0 else "เปิดซ้าย"
         
-    ax.plot(h, k, 'o', color="#E56B6F", label=f"Vertex ({h}, {k})")
+    ax.plot(h, k, 'o', color=("#E56B6F"), label=f"Vertex ({h}, {k})")
     ax.grid(True, linestyle=":", alpha=0.5)
     ax.legend()
     
